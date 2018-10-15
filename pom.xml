@@ -4,7 +4,7 @@
 
     <groupId>nihanim.springframework</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>y</version>
     <modules>
         <module>pet-clinic-data</module>
         <module>pet-clinic-web</module>
@@ -59,7 +59,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:nihanimnihan/pet-clinic.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>y</tag>
     </scm>
 
 </project>
