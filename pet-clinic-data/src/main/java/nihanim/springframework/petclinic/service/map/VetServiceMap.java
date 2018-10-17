@@ -1,11 +1,11 @@
 package nihanim.springframework.petclinic.service.map;
 
 import nihanim.springframework.petclinic.model.Vet;
-import nihanim.springframework.petclinic.service.CrudService;
+import nihanim.springframework.petclinic.service.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
