@@ -1,12 +1,23 @@
 package nihanim.springframework.petclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
+@Entity
 public class Pet extends BaseEntity{
 
+    @Column
     private String name;
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+    @Column
     private LocalDate birthDate;
 
     public String getName() {

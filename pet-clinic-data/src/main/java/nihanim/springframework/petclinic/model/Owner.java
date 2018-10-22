@@ -1,15 +1,24 @@
 package nihanim.springframework.petclinic.model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Owner extends Person {
 
     private Set<Pet> pets = new HashSet<>();
+    @Column
     private String address;
+    @Column
     private String city;
+    @Column
     private String telephone;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     public Set<Pet> getPets() {
         return pets;
     }
