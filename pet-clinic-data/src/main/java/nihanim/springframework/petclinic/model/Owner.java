@@ -10,6 +10,7 @@ import java.util.Set;
 @Entity
 public class Owner extends Person {
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
     @Column
     private String address;
@@ -18,7 +19,6 @@ public class Owner extends Person {
     @Column
     private String telephone;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     public Set<Pet> getPets() {
         return pets;
     }
